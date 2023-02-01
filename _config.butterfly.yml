@@ -7,7 +7,9 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  列表||fas fa-list:
+  留言板: /comments/ || fas fa-envelope-open
+  # hide就是默认不展开
+  列表||fas fa-list || hide:
     音乐: /music/ || fas fa-music
     电影: /movies/ || fas fa-video
   链接: /link/ || fas fa-link
@@ -41,6 +43,8 @@ copy:
 social:
   fab fa-github: https://github.com/L5501 || Github
   fas fa-envelope: mailto:2085293532@qq.com || Email
+  fa-brands fa-qq: http://wpa.qq.com/msgrd?v=3&uin=2085293532&site=qq&menu=yes || QQ
+  fa-solid fa-code: https://leetcode.cn/u/gei-wo-yi-bei-bing-mei-shi-n/ || LeeCode
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
@@ -79,13 +83,14 @@ katex:
 # Image (圖片設置)
 # --------------------------------------
 
-# Favicon（網站圖標）
-favicon: /img/favicon.png
+# Favicon（网站logo）
+# favicon: /img/favicon.png
+favicon: https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/logo/logo.ico
 
-# Avatar (頭像)
+# Avatar (头像)
 avatar:
   # img: https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
-  img: https://leebook.oss-cn-hangzhou.aliyuncs.com/kid.jpg
+  img: https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/avatar/16.jpg
   effect: false
 
 # Disable all banner image
@@ -94,7 +99,8 @@ disable_top_img: false
 # The banner image of home page
 # 首页图片
 # index_img: 'https://source.fomal.cc/img/dm4.webp' 
-index_img: 'https://w.wallhaven.cc/full/x8/wallhaven-x8w1yd.jpg' 
+# 'https://w.wallhaven.cc/full/x8/wallhaven-x8w1yd.jpg'
+index_img:
 
 # If the banner of page not setting, it will show the top_img
 default_top_img:
@@ -132,7 +138,13 @@ cover:
   
   # 文章封面图片
   default_cover:
-    - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page1.jpg
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page2.jpg
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page3.png
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page4.jpg
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page5.png
+    - https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/page/page6.png
+    # - https://w.wallhaven.cc/full/zy/wallhaven-zygeko.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -436,7 +448,7 @@ footer:
     enable: true
     since: 2022
   custom_text:
-  copyright: true # Copyright of theme and framework
+  copyright: false # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -529,7 +541,7 @@ tag_ui: # 留空或 index
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # 背景图设置
-background: url(https://w.wallhaven.cc/full/x8/wallhaven-x8w1yd.jpg)
+background: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/xml.jpg)
 
 # Footer Background
 footer_bg: false
@@ -562,7 +574,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 # 背景特效
 canvas_nest:
-  enable: true
+  enable: false
   color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
@@ -573,9 +585,9 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: false
+  enable: true
   colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖動特效)
+  shake: false #  open shake (抖動特效)
   mobile: false
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
@@ -618,10 +630,10 @@ font:
   code-font-size: '14px'
   # -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
   # Wenkai, consolas, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  font-family: var(--global-font), Consolas_1, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  font-family: YSHST,var(--global-font), Consolas_1, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
   # consolas, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
   # Consolas_1, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
+  code-font-family: Consolas_1,YSHST, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
 
 # Font settings for the site title and site subtitle
 # https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
@@ -629,7 +641,7 @@ font:
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link: 
-  font-family: var(--global-font)
+  font-family: YSHST, -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -838,7 +850,8 @@ pjax:
 # 音乐插件
 aplayerInject:
   enable: true
-  per_page: false
+  per_page: true
+
 
 # Snackbar (Toast Notification 彈窗)
 # https://github.com/polonel/SnackBar
@@ -901,9 +914,14 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
-    # - <script src="xxxx"></script>
+    - <script defer src="/js/light.js"></script> # 霓虹灯(必须defer否则有时候会不生效)
+    - <canvas id="universe"></canvas>
+    - <script defer src="/js/universe.js"></script>
+    - <script defer src="/js/cursor.js"></script> # 鼠标颜色
+    # - <script async src="//at.alicdn.com/t/c/font_3851170_410t44or9j3.js"></script>  # 引入标签
+
 
 # CDN
 # Don't modify the following settings unless you know how they work
@@ -978,3 +996,25 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+
+# electric_clock (安知鱼电子钟)
+# see https://anzhiy.cn/posts/fc18.html
+electric_clock:
+  enable: true # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  qweather_key: c9e3ea1d7e344c53bf021bfbe80c2ba9 # 和风天气key
+  gaud_map_key: 60c0e892ac07b22f1d9a68348dd03a27 # 高得地图web服务key
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
