@@ -216,78 +216,83 @@ footer_beautify:
   # hexo-butterfly-categories-card
 # see https://akilar.top/posts/a9131002/
 # 标签小图
-categoryBar:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: / # 应用页面('/'表示仅在首页显示)
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  column: odd # odd：3列 | even：4列
-  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
-  message:
-    - descr: linux笔记
-      cover: https://source.fomal.cc/img/default_cover_43.webp
-    - descr: java笔记
-      cover: https://source.fomal.cc/img/default_cover_44.webp
-    - descr: 读书笔记
-      cover: https://source.fomal.cc/img/default_cover_45.webp
-    - descr: python笔记
-      cover: https://source.fomal.cc/img/default_cover_46.webp
-    - descr: 微信小程序
-      cover: https://source.fomal.cc/img/default_cover_42.webp
-    - descr: vue
-      cover: https://source.fomal.cc/img/default_cover_41.webp
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
-
-# 这个不写会报错，但是不影响使用
-magnet:
-  - enable: true
-# magnet:
-#   enable: true
-#   priority: 1
-#   enable_page: /
-#   type: categories
-#   devide: 2
-#   display:
-#     - name: linux指南
-#       display_name: linux模块
-#       icon: 📚
-#     - name: java笔记
-#       display_name: java模块
-#       icon: 🎮
-#     - name: 读书笔记
-#       display_name: 读书模块
-#       icon: 🐱‍👓
-#     # - name: vue
-#     #   display_name: 小冰の编程学习
-#     #   icon: 👩‍💻
-#     # - name: 学习
-#     #   display_name: 小冰の读书笔记
-#     #   icon: 📒
-#     # - name: 随想
-#     #   display_name: 小冰の胡思乱想
-#     #   icon: 💡
-#   color_setting:
-#     text_color: black
-#     text_hover_color: white
-#     background_color: "#f2f2f2"
-#     background_hover_color: "#69e8f2"
-#   layout:
+# categoryBar:
+#   enable: false # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: / # 应用页面('/'表示仅在首页显示)
+#   layout: # 挂载容器类型
 #     type: id
 #     name: recent-posts
 #     index: 0
-#   temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
-#   plus_style: ""
+#   column: odd # odd：3列 | even：4列
+#   row: 1 #显示行数，默认两行，超过行数切换为滚动显示
+#   message:
+#     - descr: linux笔记
+#       cover: https://source.fomal.cc/img/default_cover_43.webp
+#     - descr: java笔记
+#       cover: https://source.fomal.cc/img/default_cover_44.webp
+#     - descr: 读书笔记
+#       cover: https://source.fomal.cc/img/default_cover_45.webp
+#     - descr: python笔记
+#       cover: https://source.fomal.cc/img/default_cover_46.webp
+#     - descr: 微信小程序
+#       cover: https://source.fomal.cc/img/default_cover_42.webp
+#     - descr: vue
+#       cover: https://source.fomal.cc/img/default_cover_41.webp
+#   custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
+
+# 这个不写会报错，但是不影响使用
+# magnet:
+#   - enable: fasle
+magnet:
+  enable: true
+  priority: 1
+  enable_page: /
+  type: categories
+  devide: 3
+  display:
+    - name: linux笔记
+      display_name: linux笔记
+      icon: 📚
+    - name: java笔记
+      display_name: java笔记
+      icon: ☕
+    - name: 读书笔记
+      display_name: 读书笔记
+      icon: 📒
+    - name: python笔记
+      display_name: python笔记
+      icon: ⚙️
+    - name: 微信小程序
+      display_name: 微信小程序
+      icon: 👨‍💻
+    - name: vue
+      display_name: vue
+      icon: 💡
+    - name: 菜谱
+      display_name: 菜谱
+      icon: 🍗
+  color_setting:
+    text_color: black
+    text_hover_color: white
+    background_color: "#f2f2f2"
+    background_hover_color: "#69e8f2"
+  layout:
+    type: id
+    name: recent-posts
+    index: 0
+  temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
+  plus_style: ""
 
 
+# hexo-butterfly-swiper
+# see https://akilar.top/posts/8e1264d1/
 # hexo-butterfly-swiper
 # see https://akilar.top/posts/8e1264d1/
 swiper:
   enable: true # 开关
   priority: 5 #过滤器优先权
-  enable_page: / # 应用页面
+  enable_page: all # 应用页面
   timemode: date #date/updated
   layout: # 挂载容器类型
     type: id
@@ -298,6 +303,7 @@ swiper:
   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+
 
 butterfly_article_double_row:
   enable: true
@@ -336,7 +342,7 @@ gitcalendar:
     name: gitHub
     index: 0
   user: L5501 #git用户名
-  apiurl: 'https://www.jumparading.top'	# 这是我的API，最好自己弄一个,完整查看地址：https://www.jumparading.top/api/?L5501
+  apiurl: 'https://githubcalendar.mentaltest.run/api'	# 这是我的API，最好自己弄一个,完整查看地址：https://githubcalendar.mentaltest.run/api/?L5501
   minheight:
     pc: 280px #桌面端最小高度
     mibile: 0px #移动端最小高度

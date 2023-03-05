@@ -541,8 +541,12 @@ tag_ui: # 留空或 index
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # 背景图设置
-background: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/xml.jpg)
-
+# background: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/xml.jpg)
+background:
+  default:  url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/xml.jpg)
+  darkmode: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/elaina.jpg)
+  mobileday: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/xml.jpg)
+  mobilenight: url(https://leebook.oss-cn-hangzhou.aliyuncs.com/blog/cover/elaina.jpg)
 # Footer Background
 footer_bg: false
 
@@ -841,7 +845,7 @@ note:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
     # - xxxx
     # - xxxx
@@ -915,18 +919,26 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
+    - <link rel="stylesheet" href="/css/cat.css"> # 挂绳猫
   bottom:
     - <script defer src="/js/light.js"></script> # 霓虹灯(必须defer否则有时候会不生效)
     - <canvas id="universe"></canvas>
     - <script defer src="/js/universe.js"></script>
     - <script defer src="/js/cursor.js"></script> # 鼠标颜色
+    - <div class="aplayer no-destroy" data-id="8708383891" data-server="tencent" data-type="playlist" data-fixed="true" data-autoplay="false" data-lrcType="-1"> </div> # 首页音乐播放器
+    - <script defer src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script> # 挂绳猫
+    - <script defer data-pjax src="/js/cat.js"></script> # 挂绳猫
+    - <script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script> # 节日弹窗依赖
+    - <script defer src="/js/lunar.js"></script> # 农历计算
+    - <script defer src="/js/day.js"></script> # 节日弹窗
+    - <script async src="/js/title.js"></script> # 恶搞标题
     # - <script async src="//at.alicdn.com/t/c/font_3851170_410t44or9j3.js"></script>  # 引入标签
 
 
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
-CDN:
+# CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
@@ -996,6 +1008,77 @@ CDN:
     # prismjs_autoloader:
     # artalk_js:
     # artalk_css:
+# CDN
+# Don't modify the following settings unless you know how they work
+# 非必要請不要修改
+CDN:
+  # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
+  # option: local/jsdelivr/unpkg/cdnjs/custom
+  # Dev version can only choose. ( dev版的主題只能設置為 local )
+  internal_provider: local
+
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: local/jsdelivr/unpkg/cdnjs/custom
+  # when set it to local, you need to install hexo-butterfly-extjs
+  third_party_provider: cdnjs
+
+  # Add version number to CDN, true or false
+  version: false
+
+  # Custom format
+  # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format:
+
+  option:
+    # main_css:
+    # main:
+    # utils:
+    # translate: https://cdn1.tianli0.top/npm/js-heo@1.0.6/translate/tw_cn.js
+    # local_search:
+    # algolia_js: 
+    algolia_search_v4: https://cdn.staticfile.org/algoliasearch/4.14.3/algoliasearch-lite.umd.min.js
+    instantsearch_v4: https://cdn.staticfile.org/instantsearch.js/4.49.2/instantsearch.production.min.js
+    pjax: https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
+    # gitalk: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.7.2/gitalk.min.js
+    # gitalk_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/gitalk/1.7.2/gitalk.min.css
+    # blueimp_md5:
+    # valine: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/valine/1.4.16/Valine.min.js
+    # disqusjs: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/disqusjs/1.3.0/disqus.js
+    # disqusjs_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/disqusjs/1.3.0/disqusjs.css
+    twikoo: https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js
+    # waline_js: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/waline/1.5.4/Waline.min.js
+    # waline_css:
+    sharejs: https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js
+    sharejs_css: https://lib.baomitu.com/social-share.js/1.0.16/css/share.min.css
+    # mathjax: https://cdn.staticfile.org/mathjax/3.2.2/es5/mml-chtml.min.js
+    # katex: https://lib.baomitu.com/KaTeX/latest/katex.min.css
+    # katex_copytex:
+    # mermaid:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    lazyload: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js
+    instantpage: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js
+    typed: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js
+    # pangu:
+    fancybox_css_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css
+    fancybox_v4: https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js
+    # medium_zoom: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/medium-zoom/1.0.6/medium-zoom.min.js
+    # snackbar_css: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css
+    # snackbar: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js
+    # activate_power_mode:
+    # fireworks:
+    # click_heart:
+    # ClickShowText:
+    fontawesomeV6: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css
+    # flickr_justified_gallery_js: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.js
+    # flickr_justified_gallery_css: https://cdn.staticfile.org/flickr-justified-gallery/2.1.2/fjGallery.min.css
+    aplayer_css: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css
+    aplayer_js: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js
+    meting_js: https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js
+    # prismjs_js: https://cdn1.tianli0.top/npm/prismjs@1.1.0/prism.js
+    # prismjs_lineNumber_js: https://cdn1.tianli0.top/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+    # prismjs_autoloader: https://cdn1.tianli0.top/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 
 # electric_clock (安知鱼电子钟)
 # see https://anzhiy.cn/posts/fc18.html
