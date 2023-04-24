@@ -379,3 +379,8 @@ tag_plugins:
 aplayer: 
   meting: true
   asset_inject: false
+
+# 密码加密
+encrypt:
+  enable: true
+  password: your_password
