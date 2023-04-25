@@ -330,15 +330,24 @@ gitalk:
   admin:
   option:
 
+# 评论
 # valine
 # https://valine.js.org
 valine:
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
-  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  appId: aUfET1hy3vQV09WAaDOe1OB8-gzGzoHsz
+  appKey: RO2GA4g4ebp2qcxQecwExJk8
+  #查询下面的网站，选择评论的适合出现的图像 https://valine.js.org/#/avatar
+  avatar: monsterid # gravatar style 
+  #你的对应的服务器的地址，就在appid那一页的下面
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  #评论系统的背景
   bg: # valine background
+  #是否允许游客评论
   visitor: false
+  #评论区显示的文字
+  placeholder: 留下你的足迹o(*￣▽￣*)ブ
+  #每一页最大的评论数量
+  pageSize: 15
   option:
 
 # waline - A simple comment system with backend support fork from Valine
@@ -1109,3 +1118,6 @@ electric_clock:
   gaud_map_key: 60c0e892ac07b22f1d9a68348dd03a27 # 高得地图web服务key
   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
   rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
+
+
+
