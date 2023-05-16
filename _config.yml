@@ -272,6 +272,12 @@ magnet:
     - name: 菜谱
       display_name: 菜谱
       icon: 🍗
+    - name: 公告
+      display_name: 公告
+      icon: 😎
+    - name: 杂类
+      display_name: 杂类
+      icon: 👁️‍🗨️
   color_setting:
     text_color: black
     text_hover_color: white
