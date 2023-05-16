@@ -41,11 +41,13 @@ copy:
 # social settings (社交圖標設置)
 # formal:
 #   icon: link || the description
+# 参考网址：https://fontawesome.com
 social:
   fab fa-github: https://github.com/L5501 || Github
-  fas fa-envelope: mailto:2085293532@qq.com || Email
-  fa-brands fa-qq: http://wpa.qq.com/msgrd?v=3&uin=2085293532&site=qq&menu=yes || QQ
+  fas fa-envelope: mailto:mentaltest@gmail.com || Email
+  fa-brands fa-qq:  https://wpa.qq.com/msgrd?v=3&uin=2085293532 || QQ
   fa-solid fa-code: https://leetcode.cn/u/gei-wo-yi-bei-bing-mei-shi-n/ || LeeCode
+  fa-solid fa-code-merge: https://gitee.com/jump_parading
 
 # search (搜索)
 # see https://butterfly.js.org/posts/ceeb73f/#搜索系統
