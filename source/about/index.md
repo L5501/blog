@@ -1,8 +1,18 @@
 ---
-title: 关于
-data: 2022-11-26 20:16:00
+title: 这里是我自己搭建的国内chatgpt网站，猜对密码就能用~
+data: 2023-5-31 15:16:00
+encrypt: true
+password: hunter5501.
 ---
-<!-- GitCalendar容器 -->
-## 暂时下线
-<!-- ## github贡献图 -->
-<!-- <div id="gitHub"></div> -->
+
+### 这是网址
+
+https://www.jumparading.top/#/chat
+
+### 这是apikey
+```sc
+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
+```
+
+### 密码和这个页面的密码一样
+

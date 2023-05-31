@@ -7,20 +7,29 @@
       descr: 快速、简单且强大的网志框架
       siteshot: https://source.fomal.cc/siteshot/hexo.io.jpg
       
-- class_name: 2.友情链接
-  class_desc: 博客魔改大佬
+- class_name: 推荐博客
+  class_desc: 关于博客魔改的问题可以参照这位博主
   link_list:
     - name: Fomalhaut🥝
       link: https://fomal.cc/
-      avatar: /assets/head.jpg
+      avatar: https://sourcebucket.s3.ladydaily.com/img/avatar.webp
       descr: Future is now 🍭🍭🍭
       siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
 
-- class_name: 3.友情链接
-  class_desc: 技术大佬
+- class_name: 推荐博客
+  class_desc: 可学习算法和人工智能相关的知识
   link_list:
     - name: jack cui
       link: https://cuijiahua.com/
-      avatar: /assets/head.jpg
-      descr: Future is now 🍭🍭🍭
+      avatar: https://cuijiahua.com/wp-content/uploads/2018/01/logo-s-1.png
+      descr: python相关
+      siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
+    
+- class_name: 推荐博客
+  class_desc: 可学习和解决java相关的知识和问题
+  link_list:
+    - name: 江南一点雨
+      link: http://www.javaboy.org/
+      avatar: https://www.javaboy.org/images/sb/javaboy.jpg
+      descr: java相关
       siteshot: https://source.fomal.cc/siteshot/www.fomal.cn.jpg
